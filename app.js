@@ -4,18 +4,14 @@ const app = express();
 
 
 //Bringing routes
-const { getPosts } = require('./routes/post');
-
-const myOwnMiddleware = () => {
-    console.log(`Middleware works`);
-};
+const  postRoutes = require('./routes/post');
 
 
 //Middleware
 app.use(morgan("dev"));
-app.use(myOwnMiddleware);
 
-app.get('/', getPosts);
+
+app.use('/', postRoutes);
 
 const PORT = 8080;
 
