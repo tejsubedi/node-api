@@ -11,7 +11,7 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: "Body is required",
         minlength: 4,
-        maxlength: 2000
+        maxlength: 1500
     }
 });
 
