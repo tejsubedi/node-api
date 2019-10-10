@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }).then(() => co
 mongoose.connection.on('error', err => {
     console.log(`DB connection error: ${err.message}`);
 })
-//Bringing routes
+//Bringing route middleware
 const postRoutes = require('./routes/post');
 
 
