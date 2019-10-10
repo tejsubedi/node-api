@@ -26,5 +26,5 @@ app.use('/', postRoutes);
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
-    console.log(`Listening to the port ${PORT}`);
+    console.log(`Listening server to the port: ${PORT}`);
 })
