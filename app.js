@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const app = express();
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
 dotenv.config();
 
