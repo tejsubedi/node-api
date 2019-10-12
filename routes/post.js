@@ -1,5 +1,6 @@
 const express = require('express');
 const { getPosts, createPost } = require('../controllers/post');
+const validator = require('../validator/index');
 
 const router = express.Router();
 
