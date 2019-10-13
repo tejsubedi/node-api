@@ -9,10 +9,10 @@ exports.getPosts = (req, res) => {
 
 exports.createPost = (req, res) => {
     const post = new Post(req.body);
-    //console.log("Creating post", req.body);
-    // post.save((err, result) => {
-    //     if (err) {
-    //         return res.status(400).json({
+    console.log("Creating post", req.body);
+    post.save((err, result) => {
+        if (err) {
+            return res.status(400).json({
     //             error: err
     //         })
     //     }
