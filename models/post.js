@@ -11,7 +11,7 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 4,
-        // maxlength: 1500
+        maxlength: 1500
     }
 });
 
