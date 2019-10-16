@@ -24,6 +24,20 @@ const userSchema = new mongoose.Schema({
     updated: Date
 });
 
+//Creating virtual fields for password updated in data base
+//Virtual
+userSchema.virtual('password')
+    .set(function (password) {
+        //create temporary variable called _password
+        this._password = password;
+
+        //generate a timestamp
+        this.salt = uuidv1();
+
+        //Encrypt password
+        this.hashed_password = this.encryptPassword(password);
+    })
+
 
 
 
