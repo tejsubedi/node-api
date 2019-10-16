@@ -31,8 +31,8 @@ const userSchema = new mongoose.Schema({
  * They only exist logically and are not written to the document's collection.
  */
 
-//Creating virtual fields for password updated in data base
-//Virtual
+//Creating virtual fields for password updated in database
+
 userSchema.virtual('password')
     .set(function (password) {
         //create temporary variable called _password
@@ -50,7 +50,12 @@ userSchema.virtual('password')
     })
 
 //methods
-
+userSchema.methods = {
+    encryptPassword: function(password) {
+        if(!password)
+            return "";
+    }
+}
 
 
 module.exports = mongoose.model("User", userSchema);
