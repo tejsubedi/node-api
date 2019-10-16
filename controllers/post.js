@@ -6,7 +6,7 @@ exports.getPosts = (req, res) => {
     //     posts: [{ title: "First posts" }, { title: "Second posts" }]
     // })
 
-    const posts = Post.find().then((posts) => { res.json({ posts: posts }) }).catch(err => { console.log(err) });
+    const posts = Post.finddd().then((posts) => { res.json({ posts: posts }) }).catch(err => { console.log(err) });
 };
 
 exports.createPost = (req, res) => {
