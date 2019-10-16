@@ -24,6 +24,13 @@ const userSchema = new mongoose.Schema({
     updated: Date
 });
 
+/**
+ * Virtual fields are additional fields for a given model.
+ * Their values can be set manually or automatically with defined functionality.
+ * Keep in mind: Virtual property don't get persisted in the database.
+ * They only exist logically and are not written to the document's collection.
+ */
+
 //Creating virtual fields for password updated in data base
 //Virtual
 userSchema.virtual('password')
