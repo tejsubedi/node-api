@@ -54,6 +54,12 @@ userSchema.methods = {
     encryptPassword: function(password) {
         if(!password)
             return "";
+        try{
+            return
+        }
+        catch (err){
+            
+        }
     }
 }
 
