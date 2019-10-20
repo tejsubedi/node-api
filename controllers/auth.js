@@ -26,7 +26,11 @@ exports.signin = (req, res) => {
         //if user is found make sure email and password is matched
         //create authenticate method in model-user and use it here 
 
-        
+        if (!user.authenticate(password)) {
+            return res.status(401).json({
+                error: "Email and password do not match"
+            })
+        }
 
         //Generate a token with user id and secret
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
