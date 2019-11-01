@@ -7,5 +7,7 @@ exports.userById = (req, res, next ) => {
                 error: "User not found"
             })
         }
+        req.profile = user //adds profile object in req with user info
+        next()
     })
 }
