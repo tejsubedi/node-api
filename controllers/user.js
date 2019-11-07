@@ -28,5 +28,6 @@ exports.allUsers = (req, res) => {
                 error: err
             })
         }
+        res.json({users});
     })
 }
