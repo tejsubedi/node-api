@@ -23,12 +23,15 @@ exports.hasAuthorization = (req, res, next) => {
 
 exports.allUsers = (req, res) => {
     User.find((err, users) => {
-        if(err) {
+        if (err) {
             return res.status(400).json({
                 error: err
             })
         }
-        res.json({users});
+        res.json({ users });
     }).select("name email updated created");
 }
 
+exports.getUser = (req, res) => {
+    return res.json(req.profile);
+};
