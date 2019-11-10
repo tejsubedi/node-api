@@ -32,6 +32,3 @@ exports.allUsers = (req, res) => {
     }).select("name email updated created");
 }
 
-exports.getUser = (req, res ) => {
-    return res.json(req.profile);
-};
