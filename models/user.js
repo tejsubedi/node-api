@@ -39,7 +39,7 @@ userSchema.virtual('password')
         //create temporary variable called _password
         this._password = password;
 
-        //generate a timestamp
+        //generate a timestamp a complete random string as well
         this.salt = uuidv1();
 
         //Encrypt password
